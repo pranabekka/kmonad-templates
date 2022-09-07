@@ -1,4 +1,4 @@
-= Kmonad Template for Lenovo Legion
+= Kmonad Templates for Lenovo Legion
 
 Created on the Legion 5i.
 Should work with other Legion laptops with little to no configuration.
