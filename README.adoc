@@ -1,0 +1,15 @@
+= Kmonad Template for Lenovo Legion
+
+Created on the Legion 5i.
+Should work with other Legion laptops with little to no configuration.
+
+Includes full keyboard layout and 75ish layout.
+
+75ish layout excludes numpad and arrow keys,
+which is useful if you only want to re-map keys around the home row.
+
+NOTE: `record` key does nothing.
+Seems to be the XF86TouchpadOn button,
+but Kmonad doesn't directly support X11 keys.
+See FAQ.
+Let me know with an issue if you figure out what key it is.

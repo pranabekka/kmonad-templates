@@ -1,0 +1,39 @@
+(defcfg
+  input (device-file "/dev/input/by-path/pci-0000:00:14.0-usb-0:9:1.0-event-kbd")
+  output (uinput-sink "KMonad kbd")
+  
+  fallthrough true
+)
+
+;; defines input keyboard/events
+(defsrc
+  esc   f1    f2    f3    f4    f5    f6    f7    f8      f9    f10   f11   f12   del   kp7   kp8   kp9   kp/
+  `     1     2     3     4     5     6     7     8       9     0     -     =     bspc  kp4   kp5   kp6   kp*
+  tab   q     w     e     r     t     y     u     i       o     p     [     ]     \     kp1   kp2   kp3   kp-
+  caps  a     s     d     f     g     h     j     k       l     ;     '     ret         nlck  kp0   kp.   kp+
+  lsft  z     x     c     v     b     n     m     ,       .     /     rsft                    up
+  lctl  lmet  lalt        spc         ralt  sys   record  rctl                          left  down  rght
+)
+
+#| =====
+;; layer template
+;; column width 4, spacing 2
+(deflayer new
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _  
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _  
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _  
+  _     _     _     _     _     _     _     _     _     _     _     _     _           _     _     _     _  
+  _     _     _     _     _     _     _     _     _     _     _     _                       _ 
+  _     _     _           _           _     _     _     _                             _     _     _   
+)
+===== |# 
+
+;; defines default output keyboard/events
+(deflayer base
+  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   del   kp7   kp8   kp9   kp/
+  `     1     2     3     4     5     6     7     8     9     0     -     =     bspc  kp4   kp5   kp6   kp*
+  tab   q     w     e     r     t     y     u     i     o     p     [     ]     \     kp1   kp2   kp3   kp-
+  caps  a     s     d     f     g     h     j     k     l     ;     '     ret         nlck  kp0   kp.   kp+
+  lsft  z     x     c     v     b     n     m     ,     .     /     rsft                    up
+  lctl  lmet  lalt        spc         ralt  sys   XX    rctl                          left  down  rght
+)
